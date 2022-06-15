@@ -1,3 +1,7 @@
+# React scaffold for typescript.
+
+This is a react application scaffold implemented with typescript.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
