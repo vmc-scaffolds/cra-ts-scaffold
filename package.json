@@ -20,13 +20,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "eject": "react-scripts eject",
+    "lint:fix": "eslint \"src/**/*.{ts, tsx}\" --fix",
+    "lint": "eslint \"src/**/*.{ts, tsx}\"",
+    "prettify": "prettier \"src/**/*.{ts,tsx,json,css,scss,md}\" --write",
+    "eslint-prettier-test": "eslint-config-prettier src/index.tsx"
   },
   "browserslist": {
     "production": [
@@ -39,5 +37,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,json,css,scss,md}": "prettier --write",
+    "src/**/*.{ts,tsx}": "eslint --fix"
   }
 }
