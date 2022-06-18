@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 import { useAppDispatch, useAppSelector, counterActions } from './../../store';
 
 function Counter() {
@@ -11,8 +12,12 @@ function Counter() {
 			<div style={{ padding: '1rem' }}>
 				<span>Incremented value: {value}</span>
 				<br />
-				<button onClick={() => dispatch(counterActions.increment())}>Increment</button>{' '}
-				<button onClick={() => dispatch(counterActions.decrement())}>Decrement</button>
+				<Button variant='contained' onClick={() => dispatch(counterActions.increment())}>
+					Increment
+				</Button>{' '}
+				<Button variant='contained' onClick={() => dispatch(counterActions.decrement())}>
+					Decrement
+				</Button>
 			</div>
 			<Link to='/home'>Go to home</Link>
 		</>
