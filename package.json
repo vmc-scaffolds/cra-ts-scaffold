@@ -30,8 +30,8 @@
     "test": "react-scripts test",
     "test:ci": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
-    "lint:fix": "eslint \"src/**/*.{ts, tsx}\" --fix",
-    "lint": "eslint \"src/**/*.{ts, tsx}\"",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "lint": "eslint . --ext .ts,.tsx",
     "prettify": "prettier \"src/**/*.{ts,tsx,json,css,scss,md}\" --write",
     "eslint-prettier-test": "eslint-config-prettier src/index.tsx"
   },
